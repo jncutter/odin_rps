@@ -11,7 +11,7 @@ function getComputerChoice() {
 
 function getPlayerChoice() {
     let playerChoice = window.prompt("Rock, paper, or scissors?");
-    return playerChoice;
+    return playerChoice.toLowerCase();
 }
 
 let playerScore = 0;
@@ -71,6 +71,7 @@ function playGame() {
         
             else {
                 console.log("That is not a valid response, please try again.");
+                i--;
             }
         }
         playRound();
