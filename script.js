@@ -8,3 +8,9 @@ function getComputerChoice() {
     }
     else return "Scissors";
 }
+
+function getPlayerChoice() {
+    let playerChoice = window.prompt("Rock, paper, or scissors?");
+}
+
+getPlayerChoice();
