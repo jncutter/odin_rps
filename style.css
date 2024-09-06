@@ -1,0 +1,21 @@
+* {
+    color: #FCFAFA;
+}
+
+#playspace {
+    background-color: #881F09;
+    margin: auto;
+    text-align: center;
+}
+
+#scores {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    color: black;
+    border: hidden;
+    margin-bottom: 4px;
+    border-radius: 2px;
+}
