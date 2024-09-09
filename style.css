@@ -2,8 +2,12 @@
     color: #FCFAFA;
 }
 
+body {
+    background-color: #01041f;;
+}
+
 #playspace {
-    background-color: #881F09;
+    background-color: #060d4d;
     margin: auto;
     text-align: center;
 }
@@ -18,4 +22,9 @@ button {
     border: hidden;
     margin-bottom: 4px;
     border-radius: 2px;
+}
+
+#resultarea {
+    height: 40px;
+    background-color: #060d4d;
 }
