@@ -22,48 +22,34 @@ function playRound(playerChoice) {
             
         if (playerSelection === computerSelection) {
             document.getElementById("roundresult").innerHTML = `You both picked ${playerSelection}. This round is a draw, try again.`;
-            console.log("You: " + playerScore);
-            console.log("Computer: " + computerScore);
         } 
         else if (playerSelection === "rock" && computerSelection === "paper") {
             document.getElementById("roundresult").innerHTML = "You picked rock, and the computer picked paper. You lose, try again.";
             computerScore++;
-            console.log("You: " + playerScore);
-            console.log("Computer: " + computerScore);
         }
         else if (playerSelection === "rock" && computerSelection === "scissors") {
             document.getElementById("roundresult").innerHTML = "You picked rock, and the computer picked scissors. You win! Try again.";
             playerScore++;
-            console.log("You: " + playerScore);
-            console.log("Computer: " + computerScore);
         }
         
         else if (playerSelection === "paper" && computerSelection === "rock") {
             document.getElementById("roundresult").innerHTML = "You picked paper, and the computer picked rock. You win! Try again.";
             playerScore++;
-            console.log("You: " + playerScore);
-            console.log("Computer: " + computerScore);
         }
         
         else if (playerSelection === "paper" && computerSelection === "scissors") {
             document.getElementById("roundresult").innerHTML = "You picked paper, and the computer picked scissors. You lose, try again.";
             computerScore++;
-            console.log("You: " + playerScore);
-            console.log("Computer: " + computerScore);
         }
         
         else if (playerSelection === "scissors" && computerSelection === "rock") {
             document.getElementById("roundresult").innerHTML = "You picked scissors, and the computer picked rock. You lose, try again.";
             computerScore++;
-            console.log("You: " + playerScore);
-            console.log("Computer: " + computerScore);
         }
         
         else if (playerSelection === "scissors" && computerSelection === "paper") {
             document.getElementById("roundresult").innerHTML = "You picked scissors, and the computer picked paper. You win! Try again.";
             playerScore++;
-            console.log("You: " + playerScore);
-            console.log("Computer: " + computerScore);
         }
 }
 
