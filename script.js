@@ -11,6 +11,10 @@ function getComputerChoice() {
 
 let playerScore = 0;
 let computerScore = 0;
+const playSpace = document.getElementById("playspace");
+const rockButton = document.getElementById("rock");
+const paperButton = document.getElementById("paper");
+const scissorsButton = document.getElementById("scissors");
 
 function playRound(playerChoice) {
     const playerSelection = playerChoice;
@@ -68,6 +72,27 @@ function updateScore() {
     document.getElementById("computerscore").innerHTML = computerScore;
 }
 
+function gameOver() {
+    if (playerScore < 5 && computerScore < 5) {
+        document.getElementById("gameresult").innerHTML = "";
+        document.getElementById("newgame").innerHTML = "";
+    }
+    else if(playerScore = 5 && computerScore < 5) {
+        document.getElementById("gameresult").innerHTML = "You win!";
+        document.getElementById("newgame").innerHTML = "Refresh to start a new game.";
+        playSpace.removeChild(rockButton);
+        playSpace.removeChild(paperButton);
+        playSpace.removeChild(scissorsButton);
+    }
+    else {
+        document.getElementById("gameresult").innerHTML = "You lose.";
+        document.getElementById("newgame").innerHTML = "Refresh to start a new game.";
+        playSpace.removeChild(rockButton);
+        playSpace.removeChild(paperButton);
+        playSpace.removeChild(scissorsButton);
+    }
+}
+
 document.getElementById("rock").addEventListener("click", () => {
     playRound("rock");
 });
@@ -90,4 +115,16 @@ document.getElementById("paper").addEventListener("click", () => {
 
 document.getElementById("scissors").addEventListener("click", () => {
     updateScore();
+});
+
+document.getElementById("rock").addEventListener("click", () => {
+    gameOver();
+});
+
+document.getElementById("paper").addEventListener("click", () => {
+    gameOver();
+});
+
+document.getElementById("scissors").addEventListener("click", () => {
+    gameOver();
 });
